@@ -1,5 +1,7 @@
 # Instagram Disruptor (Full Project)
 
+This is an extension that utilizes your embaressment to help cut down on your passive scrolling habits.
+
 ## Structure
 
 - /extension → Chrome extension
