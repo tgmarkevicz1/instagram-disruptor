@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram Disruptor",
+  "version": "1.1",
+  "description": "Tracks Instagram time and plays a video reminder after 3–5 minutes.",
+  "permissions": ["tabs", "scripting", "storage"],
+  "host_permissions": [
+    "*://*.instagram.com/*",
+    "http://127.0.0.1:3000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.instagram.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Instagram Disruptor"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src http://127.0.0.1:3000"
+  }
+}
